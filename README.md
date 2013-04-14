@@ -73,8 +73,8 @@ Import `_math.scss` partial to your Sass file.
 
 Not implemented yet!
 
-* <s>`log($x)`</s>
-* <s>`log10($x)`</s>
+* ~~`log($x)`~~
+* ~~`log10($x)`~~
 
 
 ### Trigonometric functions
