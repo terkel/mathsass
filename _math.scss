@@ -1,0 +1,210 @@
+// MathSass v0.9
+// https://github.com/terkel/mathsass
+
+// Constants
+$E:  2.718281828459045;
+$PI: 3.141592653589793;
+
+// e
+@function e () {
+    @return $E;
+}
+
+// π
+@function pi () {
+    @return $PI;
+}
+
+// Exponentiation
+@function pow ($x, $n) {
+    $ret: 1;
+    @if $n >= 0 {
+        @for $i from 1 through $n {
+            $ret: $ret * $x;
+        }
+    } @else {
+        @for $i from $n to 0 {
+            $ret: $ret / $x;
+        }
+    }
+    @return $ret; 
+}
+
+// Factorial
+@function fact ($x) {
+    $ret: 1;
+    @while $x > 0 {
+        $ret: $ret * $x;
+        $x: $x - 1;
+    }
+    @return $ret;
+}
+
+// Square root
+@function sqrt ($x) {
+    $ret: 1;
+    @for $i from 1 through 24 {
+        $ret: $ret - (pow($ret, 2) - $x) / (2 * $ret);
+    }
+    @return $ret;
+}
+
+// Exponential function
+@function exp ($x) {
+    $ret: 0;
+    @for $n from 0 to 24 {
+        $ret: $ret + pow($x, $n) / fact($n);
+    }
+    @return $ret;
+}
+
+
+// Logarithms
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// // Natural logarithm
+// @function log ($x) {}
+
+// // Common logarithm
+// @function log10 ($x) {}
+
+
+// Trigonometric functions
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Sine
+@function sin ($x) {
+    $x: unitless-rad($x);
+    @return cos($x - $PI / 2);
+}
+
+// Cosine
+@function cos ($x) {
+    $x: unitless-rad($x);
+    $ret: 0;
+    @for $n from 0 to 24 {
+        $ret: $ret + pow(-1, $n) * pow($x, 2 * $n) / fact(2 * $n);
+    }
+    @return $ret;
+}
+
+// Tangent
+@function tan ($x) {
+    $x: unitless-rad($x);
+    @return sin($x) / cos($x); 
+}
+
+// Cosecant
+@function csc ($x) {
+    $x: unitless-rad($x);
+    @return 1 / sin($x);
+}
+
+// Secant
+@function sec ($x) {
+    $x: unitless-rad($x);
+    @return 1 / cos($x);
+}
+
+// Cotangent
+@function cot ($x) {
+    $x: unitless-rad($x);
+    @return 1 / tan($x);
+}
+
+
+// Inverse trigonometric functions
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Arcsine
+@function asin ($x) {
+    @return atan($x / sqrt(1 - $x * $x));
+}
+
+// Arccosine
+@function acos ($x) {
+    @return $PI / 2 - asin($x);
+}
+
+// Arctangent
+@function atan ($x) {
+    $i:  24;
+    $sgn: 0;
+    $a:   0;
+    @if $x > 1 {
+        $sgn:  1;
+        $x:    1 / $x;
+    } @else if $x < -1 {
+        $sgn: -1;
+        $x:    1 / $x;
+    }
+    @while $i > 0 {
+        $a: ($i * $i * $x * $x) / (2 * $i + 1 + $a);
+        $i: $i - 1;
+    }
+    @if $sgn > 0 {
+        @return  $PI / 2 - $x / (1 + $a);
+    } @else if $sgn < 0 {
+        @return -$PI / 2 - $x / (1 + $a);
+    } @else {
+        @return            $x / (1 + $a);
+    }
+}
+
+// Arctangent 2
+@function atan2 ($y, $x) {
+    @if $x > 0 {
+        @return atan($y / $x);
+    } @else if $x < 0 {
+        @if $y < 0 {
+            @return atan($y / $x) - $PI;
+        } @else {
+            @return atan($y / $x) + $PI;
+        }
+    } @else {
+        @if $y < 0 {
+            @return - $PI / 2;
+        } @else if $y > 0 {
+            @return $PI / 2;
+        } @else {
+            @return 0;
+        }
+    }
+}
+
+
+// Helpers
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+// Strip unit from a number
+@function strip-unit ($number) {
+    @if unitless($number) {
+        @return $number;
+    } @else {
+        @return $number / ($number * 0 + 1);
+    }
+}
+
+// Convert deg to rad
+@function deg-to-rad ($deg, $unit: true) {
+    @return strip-unit($deg) * $PI / 180 * if($unit, 1rad, 1);
+}
+
+// Convert rad to deg
+@function rad-to-deg ($rad, $unit: true) {
+    @return strip-unit($rad) * 180 / $PI * if($unit, 1deg, 1);
+}
+
+// Convert to unitless rad
+@function unitless-rad ($angle) {
+    @if unitless($angle) {
+        @return $angle;
+    } @else if unit($angle) == rad {
+        @return $angle / 1rad;
+    } @else if unit($angle) == deg {
+        @return deg-to-rad($angle, false);
+    } @else if type-of($angle) != number or not unitless($angle) {
+        @warn "#{ $angle } is not a valid number.";
+        @return $angle;
+    }
+}
