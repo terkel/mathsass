@@ -16,8 +16,10 @@ Import `_math.scss` partial to your Sass file.
 }
 ```
 
+## Features
 
-## Constants
+
+### Constants
 
 * `$E`
 * `$PI`
@@ -26,10 +28,10 @@ Import `_math.scss` partial to your Sass file.
 * `pi()` – returns `$PI` -->
 
 
-## Functions
+### Functions
 
 
-### Exponentiation
+#### Exponentiation
 
 * `pow($x, $n)`
 
@@ -39,7 +41,7 @@ Import `_math.scss` partial to your Sass file.
 ```
 
 
-### Factorial
+#### Factorial
 
 * `fact($x)`
 
@@ -49,7 +51,7 @@ Import `_math.scss` partial to your Sass file.
 ```
 
 
-### Square root
+#### Square root
 
 * `sqrt($x)`
 
@@ -59,7 +61,7 @@ Import `_math.scss` partial to your Sass file.
 ```
 
 
-### Exponential function
+#### Exponential function
 
 * `exp($x)`
 
@@ -69,7 +71,8 @@ Import `_math.scss` partial to your Sass file.
 @debug exp(1);  // 2.71828
 ```
 
-### Logarithms
+
+#### Logarithms
 
 Not implemented yet!
 
@@ -77,7 +80,7 @@ Not implemented yet!
 * ~~`log10($x)`~~
 
 
-### Trigonometric functions
+#### Trigonometric functions
 
 * `sin($x)`
 * `cos($x)`
@@ -94,7 +97,7 @@ If argument has `deg` unit, converted to `rad`.
 ```
 
 
-### Inverse trigonometric functions
+#### Inverse trigonometric functions
 
 * `asin($x)`
 * `acos($x)`
@@ -102,7 +105,7 @@ If argument has `deg` unit, converted to `rad`.
 * `atan2($y, $x)`
 
 
-## Helper functions
+### Helper functions
 
 * `strip-unit($number)`
 * `deg-to-rad ($deg, $unit: true)`
