@@ -138,7 +138,7 @@ If argument has `deg` unit, converted to `rad`.
 * [Logarithm](http://en.wikipedia.org/wiki/Logarithm), [対数](http://ja.wikipedia.org/wiki/%E5%AF%BE%E6%95%B0)
 * [Trigonometric functions](http://en.wikipedia.org/wiki/Trigonometric_functions), [三角関数](http://ja.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0)
 * [Inverse trigonometric functions](http://en.wikipedia.org/wiki/Inverse_trigonometric_functions), [逆三角関数](http://ja.wikipedia.org/wiki/%E4%B8%89%E8%A7%92%E9%96%A2%E6%95%B0#.E9.80.86.E4.B8.89.E8.A7.92.E9.96.A2.E6.95.B0)
-* [Degree (angle)](http://en.wikipedia.org/wiki/Degree_(angle\)), [度 (角度)](http://ja.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92%E5%BA%A6\))
+* [Degree (angle)](http://en.wikipedia.org/wiki/Degree_(angle)), [度 (角度)](http://ja.wikipedia.org/wiki/%E5%BA%A6_(%E8%A7%92%E5%BA%A6))
 * [Radian](http://en.wikipedia.org/wiki/Radian), [ラジアン](http://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3)
 
 
