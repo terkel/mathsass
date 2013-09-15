@@ -23,24 +23,32 @@ $SQRT2: 1.4142135623730951;
 }
 
 // Returns base to the exponent power.
-// @param {Number} $x The base number
-// @param {Number} $n The exponent to which to raise base
+// @param {Number} $base The base number
+// @param {Number} $exp The exponent to which to raise base
 // @return {Number} 
 // @example
-//     pow(4, 2)  // 16
-//     pow(4, -2) // 0.0625
-@function pow ($x, $n) {
-    $ret: 1;
-    @if $n >= 0 {
-        @for $i from 1 through $n {
-            $ret: $ret * $x;
+//     pow(4, 2)   // 16
+//     pow(4, -2)  // 0.0625
+//     pow(4, 0.2) // 1.31951
+@function pow ($base, $exp) {
+    @if $exp == floor($exp) {
+        $r: 1;
+        $s: 0;
+        @if $exp < 0 {
+            $exp: $exp * -1;
+            $s: 1;
         }
+        @while $exp > 0 {
+            @if $exp % 2 == 1 {
+                $r: $r * $base;
+            }
+            $exp: floor($exp * 0.5);
+            $base: $base * $base;
+        } 
+        @return if($s != 0, 1 / $r, $r);
     } @else {
-        @for $i from $n to 0 {
-            $ret: $ret / $x;
-        }
+        @return exp(log($base) * $exp);
     }
-    @return $ret; 
 }
 
 // Returns the factorial of a non-negative integer.
