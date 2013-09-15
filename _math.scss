@@ -1,21 +1,32 @@
 // MathSass v0.9
 // https://github.com/terkel/mathsass
+// 
+// Copyright (c) 2013 Takeru Suzuki - http://terkel.jp/
+// Licensed under the MIT license - http://opensource.org/licenses/MIT
 
 // Constants
 $E:  2.718281828459045;
 $PI: 3.141592653589793;
 
-// e
+// Returns the base of natural logarithms, e, approximately 2.71828.
+// @return {Number} Number defined as $E
 @function e () {
     @return $E;
 }
 
-// π
+// Returns the ratio of a circle’s circumference to its diameter, pi, approximately 3.14159.
+// @return {Number} Number defined as $PI
 @function pi () {
     @return $PI;
 }
 
-// Exponentiation
+// Returns base to the exponent power.
+// @param {Number} $x The base number
+// @param {Number} $n The exponent to which to raise base
+// @return {Number} 
+// @example
+//     pow(4, 2)  // 16
+//     pow(4, -2) // 0.0625
 @function pow ($x, $n) {
     $ret: 1;
     @if $n >= 0 {
@@ -30,8 +41,17 @@ $PI: 3.141592653589793;
     @return $ret; 
 }
 
-// Factorial
+// Returns the factorial of a non-negative integer.
+// @param {Number} $x A non-negative integer.
+// @return {Number}
+// @example
+//     fact(0) // 1
+//     fact(8) // 40320
 @function fact ($x) {
+    @if $x < 0 or  $x != floor($x) {
+        @warn "Argument for `fact()` must be a positive integer.";
+        @return null;
+    }
     $ret: 1;
     @while $x > 0 {
         $ret: $ret * $x;
@@ -40,8 +60,16 @@ $PI: 3.141592653589793;
     @return $ret;
 }
 
-// Square root
+// Returns the square root of a number.
+// @param {Number} $x
+// @example
+//     sqrt(2) // 1.41421
+//     sqrt(5) // 2.23607
 @function sqrt ($x) {
+    @if $x < 0 {
+        @warn "Argument for `sqrt()` must be a positive number.";
+        @return null;
+    }
     $ret: 1;
     @for $i from 1 through 24 {
         $ret: $ret - (pow($ret, 2) - $x) / (2 * $ret);
@@ -49,7 +77,11 @@ $PI: 3.141592653589793;
     @return $ret;
 }
 
-// Exponential function
+// Returns E^x, where x is the argument, and E is Euler's constant, the base of the natural logarithms.
+// @param {Number} $x
+// @example
+//     exp(1)  // 2.71828
+//     exp(-1) // 0.36788
 @function exp ($x) {
     $ret: 0;
     @for $n from 0 to 24 {
@@ -72,13 +104,21 @@ $PI: 3.141592653589793;
 // Trigonometric functions
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Sine
+// Returns the sine of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     sin(1.0472) // 0.86603
+//     sin(60deg)  // 0.86603
 @function sin ($x) {
     $x: unitless-rad($x);
     @return cos($x - $PI / 2);
 }
 
-// Cosine
+// Returns the cosine of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     cos(0.7854) // 0.70711
+//     cos(45deg)  // 0.70711
 @function cos ($x) {
     $x: unitless-rad($x);
     $ret: 0;
@@ -88,25 +128,41 @@ $PI: 3.141592653589793;
     @return $ret;
 }
 
-// Tangent
+// Returns the tangent of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     tan(0.5236) // 0.57735
+//     tan(30deg)  // 0.57735
 @function tan ($x) {
     $x: unitless-rad($x);
     @return sin($x) / cos($x); 
 }
 
-// Cosecant
+// Returns the cosecant of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     csc(1.0472) // 1.1547
+//     csc(60deg)  // 1.1547
 @function csc ($x) {
     $x: unitless-rad($x);
     @return 1 / sin($x);
 }
 
-// Secant
+// Returns the secant of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     sec(0.7854) // 1.41422
+//     sec(45deg)  // 1.41422
 @function sec ($x) {
     $x: unitless-rad($x);
     @return 1 / cos($x);
 }
 
-// Cotangent
+// Returns the cotangent of a number.
+// @param {Number} $x A number in rad or deg. Assuming unitless number to be in rad.
+// @example
+//     cot(0.5236) // 1.73205
+//     cot(30deg)  // 1.73205
 @function cot ($x) {
     $x: unitless-rad($x);
     @return 1 / tan($x);
@@ -116,17 +172,37 @@ $PI: 3.141592653589793;
 // Inverse trigonometric functions
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-// Arcsine
+// Returns the arcsine of a number.
+// @param {Number} $x A number between -1 and 1.
+// @example
+//     asin(0.1) // 0.10017
+//     asin(-1)  // -1.5708
 @function asin ($x) {
+    @if $x > 1 or $x < -1 {
+        @warn "Argument for `asin()` must be a number between -1 and 1";
+        @return null;
+    }
     @return atan($x / sqrt(1 - $x * $x));
 }
 
-// Arccosine
+// Returns the arccosine of a number.
+// @param {Number} $x A number between -1 and 1.
+// @example
+//     acos(0.1) // 1.47063
+//     acos(-1)  // 3.14159
 @function acos ($x) {
+    @if $x > 1 or $x < -1 {
+        @warn "Argument for `acos()` must be a number between -1 and 1";
+        @return null;
+    }
     @return $PI / 2 - asin($x);
 }
 
-// Arctangent
+// Returns the arccosine of a number.
+// @param {Number} $x
+// @example
+//     atan(0.1) // 0.09967
+//     atan(-1)  // -0.7854
 @function atan ($x) {
     $i:  24;
     $sgn: 0;
@@ -151,7 +227,15 @@ $PI: 3.141592653589793;
     }
 }
 
-// Arctangent 2
+// Returns the arctangent of the quotient of its arguments.
+// @param {Number} $y
+// @param {Number} $x
+// @example
+//     atan2(0, 0)  // 0
+//     atan2(0, -0) // 0 // FIXME!
+//     atan2(0, 1)  // 0
+//     atan2(0, -1) // 3.14159
+// 
 @function atan2 ($y, $x) {
     @if $x > 0 {
         @return atan($y / $x);
