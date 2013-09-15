@@ -5,7 +5,7 @@ A Sass implementation of mathematical functions.
 
 ## Usage
 
-Import `_math.scss` partial to your Sass file.
+Import `_math.scss` partial to the Sass document.
 
 ```scss
 @import "path/to/math";
@@ -108,9 +108,9 @@ If argument has `deg` unit, converted to `rad`.
 ### Helper functions
 
 * `strip-unit($number)`
-* `deg-to-rad ($deg, $unit: true)`
-* `rad-to-deg ($rad, $unit: true)`
-* `unitless-rad ($angle)`
+* `deg-to-rad($deg, $unit: true)`
+* `rad-to-deg($rad, $unit: true)`
+* `unitless-rad($angle)`
 
 ```scss
 @debug rad-to-deg(1.0472);       // 60.00014deg
@@ -131,7 +131,7 @@ If argument has `deg` unit, converted to `rad`.
 
 …and Wikipedia articles:
 
-* [Exponentiation](http://en.wikipedia.org/wiki/Exponentiation), [冪乗](http://ja.wikipedia.org/wiki/%E5%86%AA%E4%B9%97)
+* [Exponentiation](http://en.wikipedia.org/wiki/Exponentiation), [冪乗 (累乗)](http://ja.wikipedia.org/wiki/%E5%86%AA%E4%B9%97)
 * [Factorial](http://en.wikipedia.org/wiki/Factorial), [階乗](http://ja.wikipedia.org/wiki/%E9%9A%8E%E4%B9%97)
 * [Square root](http://en.wikipedia.org/wiki/Square_root), [平方根](http://ja.wikipedia.org/wiki/%E5%B9%B3%E6%96%B9%E6%A0%B9)
 * [Exponential function](http://en.wikipedia.org/wiki/Exponential_function), [指数関数](http://ja.wikipedia.org/wiki/%E6%8C%87%E6%95%B0%E9%96%A2%E6%95%B0)
