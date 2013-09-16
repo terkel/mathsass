@@ -10,18 +10,6 @@ $PI:    3.141592653589793;
 $LN2:   0.6931471805599453;
 $SQRT2: 1.4142135623730951;
 
-// Returns the base of natural logarithms, e, approximately 2.71828.
-// @return {Number} Number defined as $E
-@function e () {
-    @return $E;
-}
-
-// Returns the ratio of a circle’s circumference to its diameter, pi, approximately 3.14159.
-// @return {Number} Number defined as $PI
-@function pi () {
-    @return $PI;
-}
-
 // Returns base to the exponent power.
 // @param {Number} $base The base number
 // @param {Number} $exp The exponent to which to raise base
@@ -139,10 +127,6 @@ $SQRT2: 1.4142135623730951;
     }
     @return $x;
 }
-
-
-// Logarithms
-// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 // Returns the natural logarithm of a number.
 // @param {Number} $x
