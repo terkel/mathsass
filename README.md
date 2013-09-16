@@ -103,6 +103,12 @@ If argument has `deg` unit, converted to `rad`.
 * `atan($x)` - Arctangent (逆正接)
 * `atan2($y, $x)` - Arctangent of the quotient of its arguments (引数の比率での逆正接)
 
+```scss
+@debug atan2(0, 0);       // 0
+@debug atan2(0, -0.0);    // 3.14159
+@debug atan2(-0.0, 0);    // 0
+@debug atan2(-0.0, -0.0); // -3.14159
+```
 
 ### Helper functions
 
