@@ -21,11 +21,10 @@ Import `_math.scss` partial to the Sass document.
 
 ### Constants
 
-* `$E`
-* `$PI`
-
-<!-- * `e()` – returns `$E`
-* `pi()` – returns `$PI` -->
+* `$E` - Euler's constant (ネイピア数 [オイラー数])
+* `$PI` - π (円周率)
+* `$LN2` - The natural logarithm of 2 (2 の自然対数)
+* `$SQRT2` - The square root of 2 (2 の平方根)
 
 
 ### Functions
@@ -33,11 +32,12 @@ Import `_math.scss` partial to the Sass document.
 
 #### Exponentiation
 
-* `pow($x, $n)`
+* `pow($base, $exp)`
 
 ```scss
-@debug pow(4, 2);  // 16
-@debug pow(4, -2); // 0.0625
+@debug pow(4, 2);   // 16
+@debug pow(4, -2);  // 0.0625
+@debug pow(4, 0.2); // 1.31951
 ```
 
 
@@ -64,6 +64,8 @@ Import `_math.scss` partial to the Sass document.
 #### Exponential function
 
 * `exp($x)`
+* `frexp($x)`
+* `ldexp($x, $exp)`
 
 ```scss
 @debug exp(-1); // 0.36788
@@ -74,20 +76,17 @@ Import `_math.scss` partial to the Sass document.
 
 #### Logarithms
 
-Not implemented yet!
-
-* ~~`log($x)`~~
-* ~~`log10($x)`~~
+* `log($x)`
 
 
 #### Trigonometric functions
 
-* `sin($x)`
-* `cos($x)`
-* `tan($x)`
-* `csc($x)`
-* `sec($x)`
-* `cot($x)`
+* `sin($x)` - Sine (正弦)
+* `cos($x)` - Cosine (余弦)
+* `tan($x)` - Tangent (正接)
+* `csc($x)` - Cosecant (余割)
+* `sec($x)` - Secant (正割)
+* `cot($x)` - Cotangent (余接)
 
 If argument has `deg` unit, converted to `rad`.
 
@@ -99,10 +98,10 @@ If argument has `deg` unit, converted to `rad`.
 
 #### Inverse trigonometric functions
 
-* `asin($x)`
-* `acos($x)`
-* `atan($x)`
-* `atan2($y, $x)`
+* `asin($x)` - Arcsine (逆正弦)
+* `acos($x)` - Arccosine (逆余弦)
+* `atan($x)` - Arctangent (逆正接)
+* `atan2($y, $x)` - Arctangent of the quotient of its arguments (引数の比率での逆正接)
 
 
 ### Helper functions
