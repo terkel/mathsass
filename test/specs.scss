@@ -6,6 +6,7 @@ $bootcamp-setting-verbose: false;
 
 @include runner-start;
 
+@import "functions/acos";
 @import "functions/asin";
 @import "functions/cos";
 @import "functions/cot";

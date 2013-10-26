@@ -1,0 +1,6 @@
+@include describe("Acos") {
+  @include it("should calculate the arccosine of a number") {
+    @include should(expect( acos(0.1) ), to( be-close-to( 1.47063, 5 )));
+    @include should(expect( acos(-1)  ), to( be-close-to( 3.14159, 5 )));
+  }
+}
