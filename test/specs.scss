@@ -7,6 +7,7 @@ $bootcamp-setting-verbose: false;
 @include runner-start;
 
 @import "functions/cos";
+@import "functions/cot";
 @import "functions/csc";
 @import "functions/exp";
 @import "functions/fact";
