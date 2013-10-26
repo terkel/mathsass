@@ -1,0 +1,6 @@
+@include describe("Asin") {
+  @include it("should calculate the arcsine of a number") {
+    @include should(expect( asin(0.1) ), to( be-close-to( 0.10017, 5 )));
+    @include should(expect( asin(-1)  ), to( be-close-to( -1.5708, 5 )));
+  }
+}
