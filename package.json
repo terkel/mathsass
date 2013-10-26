@@ -2,23 +2,38 @@
   "name": "mathsass",
   "version": "0.9.1",
   "description": "A Sass implementation of mathematical functions.",
-  "main": "_math.scss",
-  "scripts": {
-    "test": "grunt test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/terkel/mathsass.git"
-  },
   "keywords": [
     "sass",
     "scss",
     "math"
   ],
-  "author": "Takeru Suzuki <terkeljp@gmail.com> (https://github.com/terkel)",
-  "readmeFilename": "README.md",
-  "bugs": {
-    "url": "https://github.com/terkel/mathsass/issues"
+  "homepage": "https://github.com/tctcl/bootcamp",
+  "bugs": "https://github.com/terkel/mathsass/issues",
+  "author": {
+    "name": "Takeru Suzuki"
+    "email": "terkeljp@gmail.com",
+    "url": "(https://github.com/terkel)"
+  },
+  "contributors": [
+    {
+      "name": "James Kyle",
+      "email": "me@thejameskyle.com",
+      "url": "https://github.com/thejameskyle"
+    }
+  ],
+  "main": "dist/math.scss",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/terkel/mathsass.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "files": [
+    "dist/",
+    "tasks/"
+  ],
+  "bin": {
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -26,5 +41,15 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-init": "~0.2.1",
     "bootcamp": "~0.0.5"
-  }
+  },
+  "engines": {
+    "node": ">=0.8.0",
+    "npm": ">=1.2.10"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/terkel/mathsass/blob/master/LICENSE.md"
+    }
+  ]
 }
