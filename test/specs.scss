@@ -24,6 +24,7 @@ $bootcamp-setting-verbose: false;
 @import "functions/sqrt";
 @import "functions/tan";
 
+@import "helpers/deg-to-rad";
 @import "helpers/strip-unit";
 
 @include runner-end;
