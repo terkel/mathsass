@@ -1,0 +1,14 @@
+@include describe("Strip Unit") {
+  @include it("should make numbers unitless") {
+    @include should(expect( strip-unit(1deg) ), to( equal(1)));
+    @include should(expect( strip-unit(1rad) ), to( equal(1)));
+    @include should(expect( strip-unit(1em)  ), to( equal(1)));
+    @include should(expect( strip-unit(1ex)  ), to( equal(1)));
+    @include should(expect( strip-unit(1px)  ), to( equal(1)));
+    @include should(expect( strip-unit(1in)  ), to( equal(1)));
+    @include should(expect( strip-unit(1cm)  ), to( equal(1)));
+    @include should(expect( strip-unit(1mm)  ), to( equal(1)));
+    @include should(expect( strip-unit(1ms)  ), to( equal(1)));
+    @include should(expect( strip-unit(1s)   ), to( equal(1)));
+  }
+}

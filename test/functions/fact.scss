@@ -1,0 +1,6 @@
+@include describe("Fact") {
+  @include it("should calculate factorials") {
+    @include should(expect( fact(0) ), to( equal( 1 )));
+    @include should(expect( fact(8) ), to( equal( 40320 )));
+  }
+}

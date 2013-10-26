@@ -1,0 +1,6 @@
+@include describe("Sec") {
+  @include it("should calculate the secant of a number") {
+    @include should(expect( sec(0.7854) ), to( be-close-to( 1.41422, 4 )));
+    @include should(expect( sec(45deg)  ), to( be-close-to( 1.41422, 4 )));
+  }
+}

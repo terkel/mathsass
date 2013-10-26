@@ -1,20 +1,43 @@
-# MathSass
+# MathSass [![NPM version](https://badge.fury.io/js/mathsass.png)](http://badge.fury.io/js/mathsass) [![Build Status](https://travis-ci.org/terkel/mathsass.png?branch=master)](https://travis-ci.org/terkel/mathsass) [![Dependency Status](https://david-dm.org/terkel/mathsass.png)](https://david-dm.org/terkel/mathsass) [![devDependency Status](https://david-dm.org/terkel/mathsass/dev-status.png)](https://david-dm.org/terkel/mathsass#info=devDependencies)
 
 A Sass implementation of mathematical functions.
 
+## Install
+
+#### Git
+
+```
+git clone git@github.com:terkel/mathsass.git && cd mathsass
+```
+
+#### Bower
+
+```
+bower install mathsass --save-dev
+```
+
+#### npm
+
+```
+npm install mathsass --save-dev
+```
 
 ## Usage
 
-Import `_math.scss` partial to the Sass document.
+Import `dist/math.scss` partial to the Sass document.
 
 ```scss
-@import "path/to/math";
+@import "path/to/dist/math";
 
 .content {
     height: 200px;
     width: 200px / tan(60deg); // 115.47005px
 }
 ```
+
+If you installed via Npm the path will be: `node_modules/mathsass/dist/math`
+
+If you installed via Bower the path will be: `bower_components/mathsass/dist/math`
 
 ## Features
 
@@ -146,6 +169,24 @@ If argument has `deg` unit, converted to `rad`.
 * [Degree (angle)](http://en.wikipedia.org/wiki/Degree_\(angle\)), [度 (角度)](http://ja.wikipedia.org/wiki/%E5%BA%A6_\(%E8%A7%92%E5%BA%A6\))
 * [Radian](http://en.wikipedia.org/wiki/Radian), [ラジアン](http://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3)
 
+## Contributing
+
+Make sure you have [node.js](http://nodejs.org/) and [grunt](http://gruntjs.com/getting-started) installed.
+
+**Clone Repository**
+```
+git clone git@github.com:terkel/mathsass.git
+```
+
+**Install Dependencies***
+```
+npm install
+```
+
+**Run Sass/Tests**
+```
+grunt
+```
 
 ## Credits
 
@@ -154,5 +195,5 @@ Special thanks to [@kaminaly](https://github.com/kaminaly) and [@pilssalgi](http
 
 ## License
 
-Copyright (c) 2013 [Takeru Suzuki](http://terkel.jp/)  
+Copyright (c) 2013 [Takeru Suzuki](http://terkel.jp/)
 Licensed under the [MIT license](http://www.opensource.org/licenses/MIT).

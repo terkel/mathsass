@@ -1,0 +1,15 @@
+@include describe("Rad to Deg") {
+  @include it("should convert radians to degress") {
+    @include should(expect( rad-to-deg(1rad) ), to( be-close-to(  57.29578deg, 5 )));
+    @include should(expect( rad-to-deg(2rad) ), to( be-close-to( 114.59156deg, 5 )));
+    @include should(expect( rad-to-deg(3rad) ), to( be-close-to( 171.88734deg, 5 )));
+    @include should(expect( rad-to-deg(6rad) ), to( be-close-to( 343.77468deg, 5 )));
+  }
+
+  @include it("should convert radians to degress without unit") {
+    @include should(expect( rad-to-deg(1rad, false) ), to( be-close-to(  57.29578, 5 )));
+    @include should(expect( rad-to-deg(2rad, false) ), to( be-close-to( 114.59156, 5 )));
+    @include should(expect( rad-to-deg(3rad, false) ), to( be-close-to( 171.88734, 5 )));
+    @include should(expect( rad-to-deg(6rad, false) ), to( be-close-to( 343.77468, 5 )));
+  }
+}

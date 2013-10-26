@@ -1,0 +1,6 @@
+@include describe("Frexp") {
+  @include it("should return two item list containing the normalized fraction and exponent of number") {
+    @include should(expect( frexp(2) ), to( equal( (0.5, 2)   )));
+    @include should(expect( frexp(5) ), to( equal( (0.625, 3) )));
+  }
+}

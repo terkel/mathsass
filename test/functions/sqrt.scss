@@ -1,0 +1,6 @@
+@include describe("Sqrt") {
+  @include it("should calculate square roots") {
+    @include should(expect( sqrt(2) ), to( be-close-to( 1.41421, 5 )));
+    @include should(expect( sqrt(5) ), to( be-close-to( 2.23607, 5 )));
+  }
+}

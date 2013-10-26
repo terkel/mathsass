@@ -1,0 +1,6 @@
+@include describe("Cot") {
+  @include it("should calculate the cotangent of a number") {
+    @include should(expect( cot(0.5236) ), to( be-close-to( 1.73205, 5 )));
+    @include should(expect( cot(30deg)  ), to( be-close-to( 1.73205, 5 )));
+  }
+}
