@@ -1,0 +1,23 @@
+@include describe("Unitless Rad") {
+  @include it("should assume unitless numbers are radians") {
+    @include should(expect( unitless-rad(1) ), to( equal( 1 )));
+    @include should(expect( unitless-rad(2) ), to( equal( 2 )));
+    @include should(expect( unitless-rad(3) ), to( equal( 3 )));
+    @include should(expect( unitless-rad(6) ), to( equal( 6 )));
+  }
+
+  @include it("should strip units from radians") {
+    @include should(expect( unitless-rad(1rad) ), to( equal( 1 )));
+    @include should(expect( unitless-rad(2rad) ), to( equal( 2 )));
+    @include should(expect( unitless-rad(3rad) ), to( equal( 3 )));
+    @include should(expect( unitless-rad(6rad) ), to( equal( 6 )));
+  }
+
+  @include it("should convert degrees to radians without unit") {
+    @include should(expect( unitless-rad(1deg)   ), to( be-close-to( 0.01745, 5 )));
+    @include should(expect( unitless-rad(10deg)  ), to( be-close-to( 0.17453, 5 )));
+    @include should(expect( unitless-rad(60deg)  ), to( be-close-to( 1.0472,  4 )));
+    @include should(expect( unitless-rad(180deg) ), to( be-close-to( 3.14159, 5 )));
+    @include should(expect( unitless-rad(360deg) ), to( be-close-to( 6.28319, 5 )));
+  }
+}
