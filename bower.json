@@ -5,8 +5,11 @@
   "main": "dist/math.scss",
   "ignore": [
     "test",
+    ".editorconfig",
+    ".gitattributes",
     ".gitignore",
     ".travis.yml",
+    "*.md",
     "Gruntfile.coffee"
   ]
 }
