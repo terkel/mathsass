@@ -7,5 +7,6 @@ $bootcamp-setting-verbose: false;
 @include runner-start;
 
 @import "functions/pow";
+@import "functions/fact";
 
 @include runner-end;
