@@ -12,6 +12,7 @@ $bootcamp-setting-verbose: false;
 @import "functions/ldexp";
 @import "functions/log";
 @import "functions/pow";
+@import "functions/sin";
 @import "functions/sqrt";
 
 @include runner-end;
