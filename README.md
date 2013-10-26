@@ -2,19 +2,42 @@
 
 A Sass implementation of mathematical functions.
 
+## Install
+
+#### Git
+
+```
+git clone git@github.com:terkel/mathsass.git && cd mathsass
+```
+
+#### Bower
+
+```
+bower install mathsass --save-dev
+```
+
+#### npm
+
+```
+npm install mathsass --save-dev
+```
 
 ## Usage
 
-Import `_math.scss` partial to the Sass document.
+Import `dist/math.scss` partial to the Sass document.
 
 ```scss
-@import "path/to/math";
+@import "path/to/dist/math";
 
 .content {
     height: 200px;
     width: 200px / tan(60deg); // 115.47005px
 }
 ```
+
+If you installed via Npm the path will be: `node_modules/mathsass/dist/math`
+
+If you installed via Bower the path will be: `bower_components/mathsass/dist/math`
 
 ## Features
 
