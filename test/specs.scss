@@ -6,7 +6,8 @@ $bootcamp-setting-verbose: false;
 
 @include runner-start;
 
-@import "functions/pow";
 @import "functions/fact";
+@import "functions/pow";
+@import "functions/sqrt";
 
 @include runner-end;
