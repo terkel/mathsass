@@ -1,6 +1,6 @@
 // MathSass v0.9.1
 // https://github.com/terkel/mathsass
-// 
+//
 // Copyright (c) 2013 Takeru Suzuki - http://terkel.jp/
 // Licensed under the MIT license - http://opensource.org/licenses/MIT
 
@@ -13,7 +13,7 @@ $SQRT2: 1.4142135623730951;
 // Returns base to the exponent power.
 // @param {Number} $base The base number
 // @param {Number} $exp The exponent to which to raise base
-// @return {Number} 
+// @return {Number}
 // @example
 //     pow(4, 2)   // 16
 //     pow(4, -2)  // 0.0625
@@ -32,7 +32,7 @@ $SQRT2: 1.4142135623730951;
             }
             $exp: floor($exp * 0.5);
             $base: $base * $base;
-        } 
+        }
         @return if($s != 0, 1 / $r, $r);
     } @else {
         @return exp(log($base) * $exp);
@@ -188,7 +188,7 @@ $SQRT2: 1.4142135623730951;
 //     tan(30deg)  // 0.57735
 @function tan ($x) {
     $x: unitless-rad($x);
-    @return sin($x) / cos($x); 
+    @return sin($x) / cos($x);
 }
 
 // Returns the cosecant of a number.
