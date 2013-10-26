@@ -1,0 +1,6 @@
+@include describe("Tan") {
+  @include it("should calculate the tangent of a number") {
+    @include should(expect( tan(0.5236) ), to( be-close-to( 0.57735, 5 )));
+    @include should(expect( tan(30deg)  ), to( be-close-to( 0.57735, 5 )));
+  }
+}
