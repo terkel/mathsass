@@ -1,0 +1,10 @@
+@include describe("Atan2") {
+  @include it("should calculate the arctangent of the quotient of its arguments") {
+    @include should(expect( atan2(   0,    0) ), to( equal( 0 )));
+    @include should(expect( atan2(   0, -0.0) ), to( be-close-to(  3.14159, 5 )));
+    @include should(expect( atan2(-0.0,    0) ), to( equal( 0 )));
+    @include should(expect( atan2(-0.0, -0.0) ), to( be-close-to( -3.14159, 5 )));
+    @include should(expect( atan2(   0,    1) ), to( equal( 0 )));
+    @include should(expect( atan2(   0,   -1) ), to( be-close-to(  3.14159, 5 )));
+  }
+}

@@ -1,0 +1,6 @@
+@include describe("Atan") {
+  @include it("should calculate the arctangent of a number") {
+    @include should(expect( atan(0.1) ), to( be-close-to( 0.09967, 5 )));
+    @include should(expect( atan(-1)  ), to( be-close-to( -0.7854, 5 )));
+  }
+}
