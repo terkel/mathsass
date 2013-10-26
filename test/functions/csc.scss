@@ -1,0 +1,6 @@
+@include describe("Csc") {
+  @include it("should calculate the cosecant of a number") {
+    @include should(expect( csc(1.0472) ), to( be-close-to( 1.1547, 5 )));
+    @include should(expect( csc(60deg)  ), to( be-close-to( 1.1547, 5 )));
+  }
+}
