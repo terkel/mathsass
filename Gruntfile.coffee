@@ -9,7 +9,7 @@ module.exports = (grunt) ->
 
   # Grunt Tasks
   grunt.initConfig
-    meta: version: '0.0.1'
+    meta: version: '0.9.1'
 
     # Sass
     sass: test:
