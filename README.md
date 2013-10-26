@@ -1,4 +1,4 @@
-# MathSass
+# MathSass [![NPM version](https://badge.fury.io/js/mathsass.png)](http://badge.fury.io/js/mathsass) [![Build Status](https://travis-ci.org/terkel/mathsass.png?branch=master)](https://travis-ci.org/terkel/mathsass) [![Dependency Status](https://david-dm.org/terkel/mathsass.png)](https://david-dm.org/terkel/mathsass) [![devDependency Status](https://david-dm.org/terkel/mathsass/dev-status.png)](https://david-dm.org/terkel/mathsass#info=devDependencies)
 
 A Sass implementation of mathematical functions.
 
