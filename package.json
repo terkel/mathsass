@@ -1,0 +1,30 @@
+{
+  "name": "mathsass",
+  "version": "1.0.0",
+  "description": "A Sass implementation of mathematical functions.",
+  "main": "_math.scss",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/terkel/mathsass.git"
+  },
+  "keywords": [
+    "sass",
+    "scss",
+    "math"
+  ],
+  "author": "Takeru Suzuki <terkeljp@gmail.com> (https://github.com/terkel)",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/terkel/mathsass/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-sass": "~0.5.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-init": "~0.2.1",
+    "bootcamp": "~0.0.5"
+  }
+}

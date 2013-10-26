@@ -146,6 +146,24 @@ If argument has `deg` unit, converted to `rad`.
 * [Degree (angle)](http://en.wikipedia.org/wiki/Degree_\(angle\)), [度 (角度)](http://ja.wikipedia.org/wiki/%E5%BA%A6_\(%E8%A7%92%E5%BA%A6\))
 * [Radian](http://en.wikipedia.org/wiki/Radian), [ラジアン](http://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%B8%E3%82%A2%E3%83%B3)
 
+## Contributing
+
+Make sure you have [node.js](http://nodejs.org/) and [grunt](http://gruntjs.com/getting-started) installed.
+
+**Clone Repository**
+```
+git clone git@github.com:terkel/mathsass.git
+```
+
+**Install Dependencies***
+```
+npm install
+```
+
+**Run Sass/Tests**
+```
+grunt
+```
 
 ## Credits
 
@@ -154,5 +172,5 @@ Special thanks to [@kaminaly](https://github.com/kaminaly) and [@pilssalgi](http
 
 ## License
 
-Copyright (c) 2013 [Takeru Suzuki](http://terkel.jp/)  
+Copyright (c) 2013 [Takeru Suzuki](http://terkel.jp/)
 Licensed under the [MIT license](http://www.opensource.org/licenses/MIT).
