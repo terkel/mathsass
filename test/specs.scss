@@ -11,5 +11,6 @@ $bootcamp-setting-verbose: false;
 @import "functions/sqrt";
 @import "functions/exp";
 @import "functions/frexp";
+@import "functions/ldexp";
 
 @include runner-end;

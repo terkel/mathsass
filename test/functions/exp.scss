@@ -1,4 +1,4 @@
-@include describe("Fact") {
+@include describe("Exp") {
   @include it("should calculate exponents of eulers constant") {
     @include should(expect( exp(1) ), to( be-close-to( 2.71828, 5 )));
   }

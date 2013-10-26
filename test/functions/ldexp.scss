@@ -1,0 +1,11 @@
+@include describe("Ldxp") {
+  @include it("should calculate ldexp") {
+    @include should(expect( ldexp(2,  1) ), to( equal( 4  )));
+    @include should(expect( ldexp(5,  2) ), to( equal( 20 )));
+  }
+
+  @include it("should calculate ldexp with negative exp") {
+    @include should(expect( ldexp(2, -1) ), to( equal( 1    )));
+    @include should(expect( ldexp(5, -2) ), to( equal( 1.25 )));
+  }
+}
