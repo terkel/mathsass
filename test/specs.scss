@@ -6,11 +6,12 @@ $bootcamp-setting-verbose: false;
 
 @include runner-start;
 
-@import "functions/fact";
-@import "functions/pow";
-@import "functions/sqrt";
 @import "functions/exp";
+@import "functions/fact";
 @import "functions/frexp";
 @import "functions/ldexp";
+@import "functions/log";
+@import "functions/pow";
+@import "functions/sqrt";
 
 @include runner-end;
