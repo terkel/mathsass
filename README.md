@@ -190,7 +190,7 @@ grunt
 
 ## Credits
 
-Special thanks to [@kaminaly](https://github.com/kaminaly) and [@pilssalgi](https://github.com/pilssalgi)!
+Special thanks to [@kaminaly](https://github.com/kaminaly), [@pilssalgi](https://github.com/pilssalgi) and [@thejameskyle](https://github.com/thejameskyle)!
 
 
 ## License
