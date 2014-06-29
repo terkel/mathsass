@@ -18,3 +18,6 @@ npm-debug.log
 
 # Test Files
 test/results.css
+
+# Ruby gems
+*.gem
