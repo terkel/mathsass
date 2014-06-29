@@ -2,7 +2,7 @@
 
 $bootcamp-setting-verbose: false;
 
-@import "../dist/math";
+@import "MathSass";
 
 @include runner-start;
 

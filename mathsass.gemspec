@@ -1,19 +1,22 @@
-require "./lib/MathSass"
+# -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = MathSass::VERSION
-  s.date = MathSass::DATE
+  s.version = "0.9.2"
+  s.date = "2013-10-26"
 
   # Gem Details
-  s.name = "mathsass"
-  s.rubyforge_project = "mathsass"
+  s.name = "MathSass"
+  s.rubyforge_project = "MathSass"
   s.summary = %q{Sass mathematical functions.}
   s.description = %q{A Sass implementation of mathematical functions.}
   s.authors = ["Takeru Suzuki"]
   s.email = ["terkeljp@gmail.com"]
   s.homepage = "https://github.com/terkel/mathsass"
   s.license = "MIT"
+
+  # Files to Include
+  s.require_paths = ["lib"]
 
   # README file
   s.files = ["README.md"]

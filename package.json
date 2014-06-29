@@ -1,5 +1,6 @@
 {
   "name": "mathsass",
+  "title": "MathSass",
   "version": "0.9.2",
   "description": "A Sass implementation of mathematical functions.",
   "keywords": [
@@ -7,7 +8,7 @@
     "scss",
     "math"
   ],
-  "homepage": "https://github.com/tctcl/bootcamp",
+  "homepage": "https://github.com/terkel/mathsass",
   "bugs": "https://github.com/terkel/mathsass/issues",
   "author": {
     "name": "Takeru Suzuki",
@@ -21,7 +22,7 @@
       "url": "https://github.com/thejameskyle"
     }
   ],
-  "main": "dist/math.scss",
+  "main": "dist/MathSass.scss",
   "repository": {
     "type": "git",
     "url": "git://github.com/terkel/mathsass.git"
@@ -30,8 +31,7 @@
     "test": "grunt test"
   },
   "files": [
-    "dist/",
-    "tasks/"
+    "dist/"
   ],
   "bin": {},
   "devDependencies": {
