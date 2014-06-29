@@ -2,7 +2,7 @@ base_directory = File.expand_path(File.join(File.dirname(__FILE__), '..'))
 mathsass_stylesheets_path = File.join(base_directory, 'dist')
 
 if (defined? Compass)
-  Compass::Frameworks.register('MathSass', :stylesheets_directory => mathsass_stylesheets_path)
+  Compass::Frameworks.register('mathsass', :stylesheets_directory => mathsass_stylesheets_path)
 else
   # compass not found, register on the Sass path via the environment.
   if ENV.has_key?("SASS_PATH")

@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.date = MathSass::DATE
 
   # Gem Details
-  s.name = "MathSass"
-  s.rubyforge_project = "MathSass"
+  s.name = "mathsass"
+  s.rubyforge_project = "mathsass"
   s.summary = %q{Sass mathematical functions.}
   s.description = %q{A Sass implementation of mathematical functions.}
   s.authors = ["Takeru Suzuki"]
