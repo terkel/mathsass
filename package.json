@@ -1,7 +1,7 @@
 {
   "name": "mathsass",
   "title": "MathSass",
-  "version": "0.9.2",
+  "version": "0.9.3",
   "description": "A Sass implementation of mathematical functions.",
   "keywords": [
     "sass",
@@ -20,6 +20,10 @@
       "name": "James Kyle",
       "email": "me@thejameskyle.com",
       "url": "https://github.com/thejameskyle"
+    },
+    {
+      "name": "Pascal Duez",
+      "url": "http://pascalduez.me/"
     }
   ],
   "main": "dist/MathSass.scss",
