@@ -9,13 +9,13 @@ module.exports = (grunt) ->
 
   # Grunt Tasks
   grunt.initConfig
-    meta: version: '0.9.1'
+    meta: version: '0.9.2'
 
     # Sass
     sass: test:
       options:
         style: 'expanded'
-        loadPath: 'node_modules/bootcamp/dist'
+        loadPath: ['dist', 'node_modules/bootcamp/dist']
       files: './test/results.css': './test/specs.scss'
 
     # Bootcamp
