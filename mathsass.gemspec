@@ -2,8 +2,8 @@
 
 Gem::Specification.new do |s|
   # Release Specific Information
-  s.version = "0.9.3"
-  s.date = "2014-07-04"
+  s.version = "0.9.4"
+  s.date = "2014-07-06"
 
   # Gem Details
   s.name = "MathSass"
