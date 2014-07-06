@@ -24,10 +24,10 @@ npm install mathsass --save-dev
 
 ## Usage
 
-Import `dist/mathsass.scss` partial to the Sass document.
+Import `dist/_math.scss` partial to the Sass document.
 
 ```scss
-@import "path/to/dist/mathsass";
+@import "path/to/dist/math";
 
 .content {
     height: 200px;
@@ -35,9 +35,9 @@ Import `dist/mathsass.scss` partial to the Sass document.
 }
 ```
 
-If you installed via Npm the path will be: `node_modules/mathsass/dist/mathsass`
+If you installed via Npm the path will be: `node_modules/mathsass/dist/math`
 
-If you installed via Bower the path will be: `bower_components/mathsass/dist/mathsass`
+If you installed via Bower the path will be: `bower_components/mathsass/dist/math`
 
 
 ## Features

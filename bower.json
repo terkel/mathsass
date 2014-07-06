@@ -2,7 +2,7 @@
   "name": "mathsass",
   "version": "0.9.4",
   "homepage": "http://github.com/terkel/mathsass",
-  "main": "dist/math.scss",
+  "main": "dist/_math.scss",
   "ignore": [
     "test",
     ".editorconfig",

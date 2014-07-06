@@ -26,7 +26,7 @@
       "url": "http://pascalduez.me/"
     }
   ],
-  "main": "dist/mathsass.scss",
+  "main": "dist/_math.scss",
   "repository": {
     "type": "git",
     "url": "git://github.com/terkel/mathsass.git"
