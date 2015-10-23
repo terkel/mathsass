@@ -1,9 +1,19 @@
 // Returns the natural logarithm of a number.
 // @param {Number} $x
+// @param {Number} $b The base number
 // @example
-//     log(2)  // 0.69315
-//     log(10) // 2.30259
-@function log ($x) {
+//     log(2)     // 0.69315
+//     log(10)    // 2.30259
+//     log(2, 10) // 0.30103
+@function log ($x, $b: null) {
+    @if $b == null {
+        @return _log($x);
+    } @else {
+        @return _log($x) / _log($b);
+    }
+}
+
+@function _log ($x) {
     @if $x <= 0 {
         @return 0 / 0;
     }
