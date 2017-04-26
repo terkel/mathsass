@@ -18,6 +18,7 @@ npm-debug.log
 
 # Test Files
 test/results.css
+test/results.css.map
 
 # Ruby gems
 *.gem

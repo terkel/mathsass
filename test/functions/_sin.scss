@@ -2,5 +2,6 @@
   @include it("should calculate the sine of a number") {
     @include should(expect( sin(1.0472) ), to( be-close-to( 0.86603, 5 )));
     @include should(expect( sin(60deg)  ), to( be-close-to( 0.86603, 5 )));
+    @include should(expect( sin(100)  ), to( be-close-to( -0.50637, 5 )));
   }
 }
