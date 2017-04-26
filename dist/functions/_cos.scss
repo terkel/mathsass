@@ -4,7 +4,6 @@
 //     cos(0.7854) // 0.70711
 //     cos(45deg)  // 0.70711
 @function cos ($x) {
-    $PI: 3.141592653589793;
     $x: unitless-rad($x) % ($PI*2);
     $ret: 0;
     @for $n from 0 to 24 {
