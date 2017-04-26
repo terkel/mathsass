@@ -2,5 +2,6 @@
   @include it("should calculate the natural logarithm of a number") {
     @include should(expect( log(2)  ), to( be-close-to( 0.69315, 5 )));
     @include should(expect( log(10) ), to( be-close-to( 2.30259, 5 )));
+    @include should(expect( log(2, 10) ), to( be-close-to( 0.30103, 5 )));
   }
 }
