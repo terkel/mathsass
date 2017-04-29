@@ -103,9 +103,9 @@ If you installed via Bower the path will be: `bower_components/mathsass/dist/mat
 * `log($x, $b: null)`
 
 ```scss
-@debug log(2)     // 0.69315
-@debug log(10)    // 2.30259
-@debug log(2, 10) // 0.30103
+@debug log(2);     // 0.69315
+@debug log(10);    // 2.30259
+@debug log(2, 10); // 0.30103
 ```
 
 
