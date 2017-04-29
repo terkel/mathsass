@@ -1,6 +1,6 @@
 {
   "name": "mathsass",
-  "version": "0.9.5",
+  "version": "0.10.0",
   "homepage": "http://github.com/terkel/mathsass",
   "main": "dist/_math.scss",
   "ignore": [
