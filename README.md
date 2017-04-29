@@ -185,7 +185,7 @@ Make sure you have [node.js](http://nodejs.org/) and [grunt](http://gruntjs.com/
 git clone git@github.com:terkel/mathsass.git
 ```
 
-**Install Dependencies***
+**Install Dependencies**
 ```
 npm install
 ```
