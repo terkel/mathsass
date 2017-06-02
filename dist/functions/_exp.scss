@@ -4,11 +4,5 @@
 //     exp(1)  // 2.71828
 //     exp(-1) // 0.36788
 @function exp ($x) {
-    $ret: 0;
-    $i: 1;
-    @for $n from 0 to 24 {
-        $ret: $ret + $i;
-        $i: $i * $x / ($n + 1);
-    }
-    @return $ret;
+    @return pow($E, $x);
 }
