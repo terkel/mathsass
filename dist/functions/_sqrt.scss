@@ -10,7 +10,7 @@
     }
     $ret: 1;
     @for $i from 1 through 24 {
-        $ret: $ret - (pow($ret, 2) - $x) / (2 * $ret);
+        $ret: $ret - ($ret * $ret - $x) / (2 * $ret);
     }
     @return $ret;
 }
