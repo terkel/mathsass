@@ -2,5 +2,6 @@
   @include it("should calculate square roots") {
     @include should(expect( sqrt(2) ), to( be-close-to( 1.41421, 5 )));
     @include should(expect( sqrt(5) ), to( be-close-to( 2.23607, 5 )));
+    @include should(expect( sqrt(12345.67) ), to( be-close-to( 111.11107, 5 )));
   }
 }

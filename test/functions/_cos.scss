@@ -1,6 +1,9 @@
 @include describe("Cos") {
   @include it("should calculate the cosine of a number") {
-    @include should(expect( cos(0.7854) ), to( be-close-to( 0.70711, 5 )));
-    @include should(expect( cos(45deg)  ), to( be-close-to( 0.70711, 5 )));
+    @include should(expect( cos(0.7854)   ), to( be-close-to( 0.70711, 5 )));
+    @include should(expect( cos(45deg)    ), to( be-close-to( 0.70711, 5 )));
+    @include should(expect( cos(315deg)   ), to( be-close-to( 0.70711, 5 )));
+    @include should(expect( cos(3645deg)  ), to( be-close-to( 0.70711, 5 )));
+    @include should(expect( cos(-3645deg) ), to( be-close-to( 0.70711, 5 )));
   }
 }
