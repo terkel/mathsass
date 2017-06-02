@@ -6,19 +6,21 @@
 //     log(10)    // 2.30259
 //     log(2, 10) // 0.30103
 @function log ($x, $b: null) {
-    @if $b == null {
-        @return _log($x);
-    } @else {
-        @return _log($x) / _log($b);
+    @if $b != null {
+        @return log($x) / log($b);
     }
-}
 
-@function _log ($x) {
     @if $x <= 0 {
         @return 0 / 0;
     }
     $k: nth(frexp($x / $SQRT2), 2);
     $x: $x / ldexp(1, $k);
+
+    @return $LN2 * $k + _log($x);
+}
+
+// a good aproximation for $x close to 1
+@function _log ($x) {
     $x: ($x - 1) / ($x + 1);
     $x2: $x * $x;
     $i: 1;
@@ -30,5 +32,5 @@
         $sp: $s;
         $s: $s + $x / $i;
     }
-    @return $LN2 * $k + 2 * $s;
+    @return 2 * $s;
 }
