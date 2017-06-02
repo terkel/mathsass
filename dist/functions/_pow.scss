@@ -22,6 +22,8 @@
             $base: $base * $base;
         }
         @return if($s != 0, 1 / $r, $r);
+    } @else if $base == 0 and $exp > 0 {
+        @return 0;
     } @else {
         $expint: floor($exp);
         $r1: pow($base, $expint);
