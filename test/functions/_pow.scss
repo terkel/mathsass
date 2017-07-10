@@ -3,7 +3,7 @@
     @include should(expect( pow(4,  2) ), to( equal( 16 )));
   }
 
-  @include it("should handle 0 correctly") {
+  @include it("should handle zero correctly") {
     @include should(expect( pow(0,   0) ), to( equal( 1 )));
     @include should(expect( pow(3.5, 0) ), to( equal( 1 )));
     @include should(expect( pow(0, 3.5) ), to( equal( 0 )));
