@@ -22,7 +22,23 @@
             $base: $base * $base;
         }
         @return if($s != 0, 1 / $r, $r);
+    } @else if $base == 0 and $exp > 0 {
+        @return 0;
     } @else {
-        @return exp(log($base) * $exp);
+        $expint: floor($exp);
+        $r1: pow($base, $expint);
+        $r2: _exp(log($base) * ($exp - $expint));
+        @return $r1 * $r2;
     }
+}
+
+// A good approximation for $x close to 0.
+@function _exp ($x) {
+    $ret: 0;
+    $i: 1;
+    @for $n from 0 to 24 {
+        $ret: $ret + $i;
+        $i: $i * $x / ($n + 1);
+    }
+    @return $ret;
 }

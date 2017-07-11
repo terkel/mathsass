@@ -4,4 +4,12 @@
     @include should(expect( log(10) ), to( be-close-to( 2.30259, 5 )));
     @include should(expect( log(2, 10) ), to( be-close-to( 0.30103, 5 )));
   }
+
+  @include it("should calculate the natural logarithm of a large fractional number") {
+    @include should(expect( log(12345.678)  ), to( be-close-to( 9.421061, 5 )));
+  }
+
+  @include it("should calculate the natural logarithm of a small fractional number") {
+    @include should(expect( log(0.0001)  ), to( be-close-to( -9.210340, 5 )));
+  }
 }

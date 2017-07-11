@@ -6,4 +6,12 @@
   @include it("should calculate negative exponents of eulers constant") {
     @include should(expect( exp(-1) ), to( be-close-to( 0.36788, 5 )));
   }
+
+  @include it("should calculate large exponents of eulers constant") {
+    @include should(expect( exp(10) ), to( be-close-to( 22026.46579, 5 )));
+  }
+
+  @include it("should calculate large fractional exponents of eulers constant") {
+    @include should(expect( exp(10.5) ), to( be-close-to( 36315.50267, 5 )));
+  }
 }
