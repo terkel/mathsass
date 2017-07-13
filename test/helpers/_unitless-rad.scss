@@ -20,4 +20,18 @@
     @include should(expect( unitless-rad(180deg) ), to( be-close-to( 3.14159, 5 )));
     @include should(expect( unitless-rad(360deg) ), to( be-close-to( 6.28319, 5 )));
   }
+
+  @include it("should convert turns to radians without unit") {
+    @include should(expect( unitless-rad(.1turn) ), to( be-close-to( 0.62832, 5 )));
+    @include should(expect( unitless-rad(.2turn) ), to( be-close-to( 1.25664, 4 )));
+    @include should(expect( unitless-rad(.5turn) ), to( be-close-to( 3.14159, 5 )));
+    @include should(expect( unitless-rad(1turn)  ), to( be-close-to( 6.28319, 5 )));
+  }
+
+  @include it("should convert gradians to radians without unit") {
+    @include should(expect( unitless-rad(1grad)   ), to( be-close-to( 0.01571, 5 )));
+    @include should(expect( unitless-rad(10grad)  ), to( be-close-to( 0.15708, 4 )));
+    @include should(expect( unitless-rad(200grad) ), to( be-close-to( 3.14159, 5 )));
+    @include should(expect( unitless-rad(400grad) ), to( be-close-to( 6.28319, 5 )));
+  }
 }
