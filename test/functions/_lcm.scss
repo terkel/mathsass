@@ -1,0 +1,6 @@
+@include describe("Lcm") {
+  @include it("should calculate the least common multiple of two numbers") {
+    @include should(expect( lcm(4, 6) ), to( equal( 12 )));
+    @include should(expect( lcm(30, 42) ), to( equal( 210 )));
+  }
+}

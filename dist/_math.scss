@@ -38,6 +38,10 @@
 @import "functions/atan";
 @import "functions/atan2";
 
+// Greatest common divisor and least common multiple
+@import "functions/gcd";
+@import "functions/lcm";
+
 // Helpers
 @import "helpers/strip-unit";
 @import "helpers/deg-to-rad";
