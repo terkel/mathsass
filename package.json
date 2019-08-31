@@ -1,7 +1,7 @@
 {
   "name": "mathsass",
   "title": "MathSass",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "description": "A Sass implementation of mathematical functions.",
   "keywords": [
     "sass",
