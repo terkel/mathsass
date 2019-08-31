@@ -1,0 +1,6 @@
+@include describe("Gcd") {
+  @include it("should calculate the greatest common divisor of two numbers") {
+    @include should(expect( gcd(2, 3) ), to( equal( 1 )));
+    @include should(expect( gcd(54, 24) ), to( equal( 6 )));
+  }
+}

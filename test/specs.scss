@@ -16,6 +16,8 @@ $bootcamp-setting-verbose: false;
 @import "functions/exp";
 @import "functions/fact";
 @import "functions/frexp";
+@import "functions/gcd";
+@import "functions/lcm";
 @import "functions/ldexp";
 @import "functions/log";
 @import "functions/pow";
