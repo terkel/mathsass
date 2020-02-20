@@ -11,6 +11,7 @@
 
   @include it("should calculate negative exponents") {
     @include should(expect( pow(4, -2) ), to( equal( 0.0625 )));
+    @include should(expect( pow(4, 10 * (0.8 - 1)) ), to( equal( 0.0625 )));
   }
 
   @include it("should calculate decimal exponents") {
